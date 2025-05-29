@@ -1,3 +1,7 @@
+package praktikum.graph_disjoint;
+
+import praktikum.AnsiColor;
+
 public class L0124062_MuhammadDaffaRahman_Graph_AdjacencyMatrix {
     public static void main(String[] args) {
         AdjencyMatrixWeightedDirectedGraph someGraph = new AdjencyMatrixWeightedDirectedGraph(8);
