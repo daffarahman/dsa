@@ -1,7 +1,5 @@
 package praktikum.graph_disjoint;
 
-import praktikum.AnsiColor;
-
 public class L0124062_MuhammadDaffaRahman_Graph_AdjacencyMatrix {
     public static void main(String[] args) {
         AdjencyMatrixWeightedDirectedGraph someGraph = new AdjencyMatrixWeightedDirectedGraph(8);
@@ -36,7 +34,7 @@ class AdjencyMatrixWeightedDirectedGraph {
         }
     }
 
-    public int get(int from, int to) {
+    public int getEdge(int from, int to) {
         if (from >= 0 && from < maxVertices && to >= 0 && to < maxVertices) {
             return matrix[from][to];
         }
@@ -44,21 +42,18 @@ class AdjencyMatrixWeightedDirectedGraph {
     }
 
     public void printMatrix() {
-        System.out.print(AnsiColor.ANSI_WHITE_BACKGROUND + AnsiColor.ANSI_BLACK + " |");
+        System.out.print(" |");
         for (int i = 0; i < maxVertices; i++) {
             System.out.print(String.format("%3c|", 65 + i));
         }
         System.out.print("\n");
 
         for (int i = 0; i < maxVertices; i++) {
-            System.out.print(String.format("%s%c|", AnsiColor.ANSI_WHITE_BACKGROUND + AnsiColor.ANSI_BLACK, 65 + i));
+            System.out.print(String.format("%c|", 65 + i));
             for (int j = 0; j < maxVertices; j++) {
                 System.out
                         .print(String
-                                .format("%s%3d%s|",
-                                        (matrix[i][j] == 0) ? AnsiColor.ANSI_BLACK_BACKGROUND + AnsiColor.ANSI_WHITE
-                                                : AnsiColor.ANSI_GREEN_BACKGROUND + AnsiColor.ANSI_BLACK,
-                                        matrix[i][j], AnsiColor.ANSI_BLACK_BACKGROUND + AnsiColor.ANSI_WHITE));
+                                .format("%3d|", matrix[i][j]));
             }
             System.out.print("\n");
         }

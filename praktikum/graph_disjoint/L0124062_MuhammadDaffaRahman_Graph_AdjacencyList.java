@@ -42,7 +42,7 @@ class AdjacencyListWeightedDirectedGraph {
         }
     }
 
-    public int get(int from, int to) {
+    public int getEdge(int from, int to) {
         Edge current = list[from];
         while (current != null) {
             if (current.to == to)
